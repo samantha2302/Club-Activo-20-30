@@ -189,12 +189,12 @@
                     <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuAgreCamaraMousePressed"/>
                   </Events>
                 </Menu>
-                <Menu class="javax.swing.JMenu" name="jMenuAgreSocio">
+                <Menu class="javax.swing.JMenu" name="jMenuAgreSocioEvento">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Agregar socio"/>
+                    <Property name="text" type="java.lang.String" value="Agregar socio a Evento"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuAgreSocioMousePressed"/>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuAgreSocioEventoMousePressed"/>
                   </Events>
                 </Menu>
                 <Menu class="javax.swing.JMenu" name="jMenuAgregarEvento">
@@ -206,6 +206,92 @@
                   </Events>
                 </Menu>
               </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenuAgregarClub">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Club"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuAgregarClubMousePressed"/>
+              </Events>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenuAgregarRedesSociales">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Redes Sociales"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuAgregarRedesSocialesMousePressed"/>
+              </Events>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenu5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pagos"/>
+              </Properties>
+              <SubComponents>
+                <Menu class="javax.swing.JMenu" name="jMenuAgregarPagoMembresia">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Membres&#xed;a"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuAgregarPagoMembresiaMousePressed"/>
+                  </Events>
+                </Menu>
+                <Menu class="javax.swing.JMenu" name="jMenuAgregarPagoaNacional">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Nacional"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuAgregarPagoaNacionalMousePressed"/>
+                  </Events>
+                </Menu>
+                <Menu class="javax.swing.JMenu" name="jMenuAgregarPagoRegular">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Regulares"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuAgregarPagoRegularMousePressed"/>
+                  </Events>
+                </Menu>
+              </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenu6">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Entradas"/>
+              </Properties>
+              <SubComponents>
+                <Menu class="javax.swing.JMenu" name="jMenuAgregarEntradaEconomica">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Econ&#xf3;micas"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuAgregarEntradaEconomicaMousePressed"/>
+                  </Events>
+                </Menu>
+                <Menu class="javax.swing.JMenu" name="jMenuEntradaEspecie">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Especies"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuEntradaEspecieMousePressed"/>
+                  </Events>
+                </Menu>
+              </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenuAgreagarGasto">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Gastos"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuAgreagarGastoMousePressed"/>
+              </Events>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenuAgregarJuntaDirectiva">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Junta Directiva"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuAgregarJuntaDirectivaMousePressed"/>
+              </Events>
             </Menu>
           </SubComponents>
         </Menu>
@@ -285,6 +371,65 @@
                 </Menu>
               </SubComponents>
             </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenu14">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Club"/>
+              </Properties>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenu15">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Redes Sociales"/>
+              </Properties>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenu16">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pagos"/>
+              </Properties>
+              <SubComponents>
+                <Menu class="javax.swing.JMenu" name="jMenu1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Membres&#xed;a"/>
+                  </Properties>
+                </Menu>
+                <Menu class="javax.swing.JMenu" name="jMenu2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Nacional"/>
+                  </Properties>
+                </Menu>
+                <Menu class="javax.swing.JMenu" name="jMenu7">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Regular"/>
+                  </Properties>
+                </Menu>
+              </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenu17">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Entradas"/>
+              </Properties>
+              <SubComponents>
+                <Menu class="javax.swing.JMenu" name="jMenu8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Econ&#xf3;micas"/>
+                  </Properties>
+                </Menu>
+                <Menu class="javax.swing.JMenu" name="jMenu9">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Especies"/>
+                  </Properties>
+                </Menu>
+              </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenu18">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Gastos"/>
+              </Properties>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenu19">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Junta Directiva"/>
+              </Properties>
+            </Menu>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenuActualizar">
@@ -362,6 +507,65 @@
                   </Properties>
                 </Menu>
               </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenu56">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Club"/>
+              </Properties>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenu57">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Redes Sociales"/>
+              </Properties>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenu58">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pagos"/>
+              </Properties>
+              <SubComponents>
+                <Menu class="javax.swing.JMenu" name="jMenu10">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Membres&#xed;a"/>
+                  </Properties>
+                </Menu>
+                <Menu class="javax.swing.JMenu" name="jMenu11">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Nacional"/>
+                  </Properties>
+                </Menu>
+                <Menu class="javax.swing.JMenu" name="jMenu12">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Regular"/>
+                  </Properties>
+                </Menu>
+              </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenu59">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Entradas"/>
+              </Properties>
+              <SubComponents>
+                <Menu class="javax.swing.JMenu" name="jMenu13">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Econ&#xf3;micas"/>
+                  </Properties>
+                </Menu>
+                <Menu class="javax.swing.JMenu" name="jMenu62">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Especies"/>
+                  </Properties>
+                </Menu>
+              </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenu60">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Gastos"/>
+              </Properties>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenu61">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Junta Directiva"/>
+              </Properties>
             </Menu>
           </SubComponents>
         </Menu>
@@ -471,14 +675,14 @@
                           <EmptySpace min="-2" pref="212" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel1" min="-2" pref="393" max="-2" attributes="0"/>
+                          <Component id="lema1" min="-2" pref="393" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="188" max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lema2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -489,9 +693,9 @@
                   <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                   <Component id="fondo" min="-2" pref="221" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="lema1" min="-2" pref="35" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lema2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="71" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -500,7 +704,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="fondo">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="lema1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Black" size="14" style="0"/>
@@ -508,7 +712,7 @@
             <Property name="text" type="java.lang.String" value=" &#x201c;Sinceridad en Servicio, nuestro Lema para el &#xc9;xito&#x201d;."/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="lema2">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Black" size="12" style="0"/>
