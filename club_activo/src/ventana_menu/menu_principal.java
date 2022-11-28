@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package ventana_menu;
 
 import agregar_datos.agregar_beneficiario;
@@ -32,8 +29,8 @@ public class menu_principal extends javax.swing.JFrame {
         fondo.setIcon(icono);
         this.repaint(); 
         
-        jLabel1.setForeground(Color.white);
-        jLabel2.setForeground(Color.white);
+        lema1.setForeground(Color.white);
+        lema2.setForeground(Color.white);
         
     }
 
@@ -55,8 +52,8 @@ public class menu_principal extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         escritorioMenu = new javax.swing.JDesktopPane();
         fondo = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lema1 = new javax.swing.JLabel();
+        lema2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuInsertar = new javax.swing.JMenu();
         jMenuSocio = new javax.swing.JMenu();
@@ -179,15 +176,15 @@ public class menu_principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        jLabel1.setText(" “Sinceridad en Servicio, nuestro Lema para el Éxito”.");
+        lema1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        lema1.setText(" “Sinceridad en Servicio, nuestro Lema para el Éxito”.");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        jLabel2.setText("“La juventud para ser servida, debe servir”. ");
+        lema2.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        lema2.setText("“La juventud para ser servida, debe servir”. ");
 
         escritorioMenu.setLayer(fondo, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        escritorioMenu.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        escritorioMenu.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        escritorioMenu.setLayer(lema1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        escritorioMenu.setLayer(lema2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout escritorioMenuLayout = new javax.swing.GroupLayout(escritorioMenu);
         escritorioMenu.setLayout(escritorioMenuLayout);
@@ -200,11 +197,11 @@ public class menu_principal extends javax.swing.JFrame {
                         .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(212, 212, 212))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, escritorioMenuLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lema1, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(117, 117, 117))))
             .addGroup(escritorioMenuLayout.createSequentialGroup()
                 .addGap(188, 188, 188)
-                .addComponent(jLabel2)
+                .addComponent(lema2)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         escritorioMenuLayout.setVerticalGroup(
@@ -213,9 +210,9 @@ public class menu_principal extends javax.swing.JFrame {
                 .addGap(61, 61, 61)
                 .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lema1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(lema2)
                 .addContainerGap(71, Short.MAX_VALUE))
         );
 
@@ -330,20 +327,45 @@ public class menu_principal extends javax.swing.JFrame {
         jMenuInsertar.add(jMenuAgreEvento);
 
         jMenuAgregarClub.setText("Club");
+        jMenuAgregarClub.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuAgregarClubMousePressed(evt);
+            }
+        });
         jMenuInsertar.add(jMenuAgregarClub);
 
         jMenuAgregarRedesSociales.setText("Redes Sociales");
+        jMenuAgregarRedesSociales.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuAgregarRedesSocialesMousePressed(evt);
+            }
+        });
         jMenuInsertar.add(jMenuAgregarRedesSociales);
 
         jMenu5.setText("Pagos");
 
         jMenuAgregarPagoMembresia.setText("Membresía");
+        jMenuAgregarPagoMembresia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuAgregarPagoMembresiaMousePressed(evt);
+            }
+        });
         jMenu5.add(jMenuAgregarPagoMembresia);
 
         jMenuAgregarPagoaNacional.setText("Nacional");
+        jMenuAgregarPagoaNacional.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuAgregarPagoaNacionalMousePressed(evt);
+            }
+        });
         jMenu5.add(jMenuAgregarPagoaNacional);
 
         jMenuAgregarPagoRegular.setText("Regulares");
+        jMenuAgregarPagoRegular.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuAgregarPagoRegularMousePressed(evt);
+            }
+        });
         jMenu5.add(jMenuAgregarPagoRegular);
 
         jMenuInsertar.add(jMenu5);
@@ -351,17 +373,37 @@ public class menu_principal extends javax.swing.JFrame {
         jMenu6.setText("Entradas");
 
         jMenuAgregarEntradaEconomica.setText("Económicas");
+        jMenuAgregarEntradaEconomica.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuAgregarEntradaEconomicaMousePressed(evt);
+            }
+        });
         jMenu6.add(jMenuAgregarEntradaEconomica);
 
         jMenuEntradaEspecie.setText("Especies");
+        jMenuEntradaEspecie.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuEntradaEspecieMousePressed(evt);
+            }
+        });
         jMenu6.add(jMenuEntradaEspecie);
 
         jMenuInsertar.add(jMenu6);
 
         jMenuAgreagarGasto.setText("Gastos");
+        jMenuAgreagarGasto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuAgreagarGastoMousePressed(evt);
+            }
+        });
         jMenuInsertar.add(jMenuAgreagarGasto);
 
         jMenuAgregarJuntaDirectiva.setText("Junta Directiva");
+        jMenuAgregarJuntaDirectiva.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuAgregarJuntaDirectivaMousePressed(evt);
+            }
+        });
         jMenuInsertar.add(jMenuAgregarJuntaDirectiva);
 
         jMenuBar1.add(jMenuInsertar);
@@ -664,6 +706,42 @@ public class menu_principal extends javax.swing.JFrame {
         event.setLocation(150,70);
     }//GEN-LAST:event_jMenuAgregarEventoMousePressed
 
+    private void jMenuAgregarClubMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuAgregarClubMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuAgregarClubMousePressed
+
+    private void jMenuAgregarRedesSocialesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuAgregarRedesSocialesMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuAgregarRedesSocialesMousePressed
+
+    private void jMenuAgregarPagoMembresiaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuAgregarPagoMembresiaMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuAgregarPagoMembresiaMousePressed
+
+    private void jMenuAgregarPagoaNacionalMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuAgregarPagoaNacionalMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuAgregarPagoaNacionalMousePressed
+
+    private void jMenuAgregarPagoRegularMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuAgregarPagoRegularMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuAgregarPagoRegularMousePressed
+
+    private void jMenuAgregarEntradaEconomicaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuAgregarEntradaEconomicaMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuAgregarEntradaEconomicaMousePressed
+
+    private void jMenuEntradaEspecieMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuEntradaEspecieMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuEntradaEspecieMousePressed
+
+    private void jMenuAgreagarGastoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuAgreagarGastoMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuAgreagarGastoMousePressed
+
+    private void jMenuAgregarJuntaDirectivaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuAgregarJuntaDirectivaMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuAgregarJuntaDirectivaMousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -706,8 +784,6 @@ public class menu_principal extends javax.swing.JFrame {
     private javax.swing.JDialog jDialog1;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JFrame jFrame1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
@@ -804,6 +880,8 @@ public class menu_principal extends javax.swing.JFrame {
     private javax.swing.JPopupMenu jPopupMenu2;
     private javax.swing.JPopupMenu jPopupMenu3;
     private javax.swing.JPopupMenu jPopupMenu4;
+    private javax.swing.JLabel lema1;
+    private javax.swing.JLabel lema2;
     private java.awt.PopupMenu popupMenu1;
     // End of variables declaration//GEN-END:variables
 }
