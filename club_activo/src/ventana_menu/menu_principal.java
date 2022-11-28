@@ -74,6 +74,17 @@ public class menu_principal extends javax.swing.JFrame {
         jMenuAgreCamara = new javax.swing.JMenu();
         jMenuAgreSocioEvento = new javax.swing.JMenu();
         jMenuAgregarEvento = new javax.swing.JMenu();
+        jMenuAgregarClub = new javax.swing.JMenu();
+        jMenuAgregarRedesSociales = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
+        jMenuAgregarPagoMembresia = new javax.swing.JMenu();
+        jMenuAgregarPagoaNacional = new javax.swing.JMenu();
+        jMenuAgregarPagoRegular = new javax.swing.JMenu();
+        jMenu6 = new javax.swing.JMenu();
+        jMenuAgregarEntradaEconomica = new javax.swing.JMenu();
+        jMenuEntradaEspecie = new javax.swing.JMenu();
+        jMenuAgreagarGasto = new javax.swing.JMenu();
+        jMenuAgregarJuntaDirectiva = new javax.swing.JMenu();
         jMenuEliminar = new javax.swing.JMenu();
         jMenu20 = new javax.swing.JMenu();
         jMenu21 = new javax.swing.JMenu();
@@ -88,6 +99,17 @@ public class menu_principal extends javax.swing.JFrame {
         jMenu26 = new javax.swing.JMenu();
         jMenu44 = new javax.swing.JMenu();
         jMenu45 = new javax.swing.JMenu();
+        jMenu14 = new javax.swing.JMenu();
+        jMenu15 = new javax.swing.JMenu();
+        jMenu16 = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu7 = new javax.swing.JMenu();
+        jMenu17 = new javax.swing.JMenu();
+        jMenu8 = new javax.swing.JMenu();
+        jMenu9 = new javax.swing.JMenu();
+        jMenu18 = new javax.swing.JMenu();
+        jMenu19 = new javax.swing.JMenu();
         jMenuActualizar = new javax.swing.JMenu();
         jMenu27 = new javax.swing.JMenu();
         jMenu28 = new javax.swing.JMenu();
@@ -102,6 +124,17 @@ public class menu_principal extends javax.swing.JFrame {
         jMenu33 = new javax.swing.JMenu();
         jMenu46 = new javax.swing.JMenu();
         jMenu47 = new javax.swing.JMenu();
+        jMenu56 = new javax.swing.JMenu();
+        jMenu57 = new javax.swing.JMenu();
+        jMenu58 = new javax.swing.JMenu();
+        jMenu10 = new javax.swing.JMenu();
+        jMenu11 = new javax.swing.JMenu();
+        jMenu12 = new javax.swing.JMenu();
+        jMenu59 = new javax.swing.JMenu();
+        jMenu13 = new javax.swing.JMenu();
+        jMenu62 = new javax.swing.JMenu();
+        jMenu60 = new javax.swing.JMenu();
+        jMenu61 = new javax.swing.JMenu();
         jMenuConsultas = new javax.swing.JMenu();
         jMenu34 = new javax.swing.JMenu();
         jMenu35 = new javax.swing.JMenu();
@@ -296,6 +329,41 @@ public class menu_principal extends javax.swing.JFrame {
 
         jMenuInsertar.add(jMenuAgreEvento);
 
+        jMenuAgregarClub.setText("Club");
+        jMenuInsertar.add(jMenuAgregarClub);
+
+        jMenuAgregarRedesSociales.setText("Redes Sociales");
+        jMenuInsertar.add(jMenuAgregarRedesSociales);
+
+        jMenu5.setText("Pagos");
+
+        jMenuAgregarPagoMembresia.setText("Membresía");
+        jMenu5.add(jMenuAgregarPagoMembresia);
+
+        jMenuAgregarPagoaNacional.setText("Nacional");
+        jMenu5.add(jMenuAgregarPagoaNacional);
+
+        jMenuAgregarPagoRegular.setText("Regulares");
+        jMenu5.add(jMenuAgregarPagoRegular);
+
+        jMenuInsertar.add(jMenu5);
+
+        jMenu6.setText("Entradas");
+
+        jMenuAgregarEntradaEconomica.setText("Económicas");
+        jMenu6.add(jMenuAgregarEntradaEconomica);
+
+        jMenuEntradaEspecie.setText("Especies");
+        jMenu6.add(jMenuEntradaEspecie);
+
+        jMenuInsertar.add(jMenu6);
+
+        jMenuAgreagarGasto.setText("Gastos");
+        jMenuInsertar.add(jMenuAgreagarGasto);
+
+        jMenuAgregarJuntaDirectiva.setText("Junta Directiva");
+        jMenuInsertar.add(jMenuAgregarJuntaDirectiva);
+
         jMenuBar1.add(jMenuInsertar);
 
         jMenuEliminar.setText("Eliminar");
@@ -342,6 +410,41 @@ public class menu_principal extends javax.swing.JFrame {
 
         jMenuEliminar.add(jMenu26);
 
+        jMenu14.setText("Club");
+        jMenuEliminar.add(jMenu14);
+
+        jMenu15.setText("Redes Sociales");
+        jMenuEliminar.add(jMenu15);
+
+        jMenu16.setText("Pagos");
+
+        jMenu1.setText("Membresía");
+        jMenu16.add(jMenu1);
+
+        jMenu2.setText("Nacional");
+        jMenu16.add(jMenu2);
+
+        jMenu7.setText("Regular");
+        jMenu16.add(jMenu7);
+
+        jMenuEliminar.add(jMenu16);
+
+        jMenu17.setText("Entradas");
+
+        jMenu8.setText("Económicas");
+        jMenu17.add(jMenu8);
+
+        jMenu9.setText("Especies");
+        jMenu17.add(jMenu9);
+
+        jMenuEliminar.add(jMenu17);
+
+        jMenu18.setText("Gastos");
+        jMenuEliminar.add(jMenu18);
+
+        jMenu19.setText("Junta Directiva");
+        jMenuEliminar.add(jMenu19);
+
         jMenuBar1.add(jMenuEliminar);
 
         jMenuActualizar.setText("Actualizar");
@@ -387,6 +490,41 @@ public class menu_principal extends javax.swing.JFrame {
         jMenu33.add(jMenu47);
 
         jMenuActualizar.add(jMenu33);
+
+        jMenu56.setText("Club");
+        jMenuActualizar.add(jMenu56);
+
+        jMenu57.setText("Redes Sociales");
+        jMenuActualizar.add(jMenu57);
+
+        jMenu58.setText("Pagos");
+
+        jMenu10.setText("Membresía");
+        jMenu58.add(jMenu10);
+
+        jMenu11.setText("Nacional");
+        jMenu58.add(jMenu11);
+
+        jMenu12.setText("Regular");
+        jMenu58.add(jMenu12);
+
+        jMenuActualizar.add(jMenu58);
+
+        jMenu59.setText("Entradas");
+
+        jMenu13.setText("Económicas");
+        jMenu59.add(jMenu13);
+
+        jMenu62.setText("Especies");
+        jMenu59.add(jMenu62);
+
+        jMenuActualizar.add(jMenu59);
+
+        jMenu60.setText("Gastos");
+        jMenuActualizar.add(jMenu60);
+
+        jMenu61.setText("Junta Directiva");
+        jMenuActualizar.add(jMenu61);
 
         jMenuBar1.add(jMenuActualizar);
 
@@ -570,6 +708,18 @@ public class menu_principal extends javax.swing.JFrame {
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu10;
+    private javax.swing.JMenu jMenu11;
+    private javax.swing.JMenu jMenu12;
+    private javax.swing.JMenu jMenu13;
+    private javax.swing.JMenu jMenu14;
+    private javax.swing.JMenu jMenu15;
+    private javax.swing.JMenu jMenu16;
+    private javax.swing.JMenu jMenu17;
+    private javax.swing.JMenu jMenu18;
+    private javax.swing.JMenu jMenu19;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu20;
     private javax.swing.JMenu jMenu21;
     private javax.swing.JMenu jMenu22;
@@ -602,12 +752,24 @@ public class menu_principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu47;
     private javax.swing.JMenu jMenu48;
     private javax.swing.JMenu jMenu49;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu50;
     private javax.swing.JMenu jMenu51;
     private javax.swing.JMenu jMenu52;
     private javax.swing.JMenu jMenu53;
     private javax.swing.JMenu jMenu54;
     private javax.swing.JMenu jMenu55;
+    private javax.swing.JMenu jMenu56;
+    private javax.swing.JMenu jMenu57;
+    private javax.swing.JMenu jMenu58;
+    private javax.swing.JMenu jMenu59;
+    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu60;
+    private javax.swing.JMenu jMenu61;
+    private javax.swing.JMenu jMenu62;
+    private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenu jMenu9;
     private javax.swing.JMenu jMenuActualizar;
     private javax.swing.JMenu jMenuAgreBeneficiario;
     private javax.swing.JMenu jMenuAgreCamara;
@@ -616,15 +778,24 @@ public class menu_principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuAgreReuClub;
     private javax.swing.JMenu jMenuAgreReuNacioInter;
     private javax.swing.JMenu jMenuAgreSocioEvento;
+    private javax.swing.JMenu jMenuAgreagarGasto;
     private javax.swing.JMenu jMenuAgregarCategoria;
+    private javax.swing.JMenu jMenuAgregarClub;
+    private javax.swing.JMenu jMenuAgregarEntradaEconomica;
     private javax.swing.JMenu jMenuAgregarEvento;
+    private javax.swing.JMenu jMenuAgregarJuntaDirectiva;
+    private javax.swing.JMenu jMenuAgregarPagoMembresia;
+    private javax.swing.JMenu jMenuAgregarPagoRegular;
+    private javax.swing.JMenu jMenuAgregarPagoaNacional;
     private javax.swing.JMenu jMenuAgregarProyecto;
+    private javax.swing.JMenu jMenuAgregarRedesSociales;
     private javax.swing.JMenu jMenuAgregarTipo;
     private javax.swing.JMenu jMenuAgregarVoluntario;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenu jMenuConsultas;
     private javax.swing.JMenu jMenuEliminar;
+    private javax.swing.JMenu jMenuEntradaEspecie;
     private javax.swing.JMenu jMenuInsertar;
     private javax.swing.JMenu jMenuProyecto;
     private javax.swing.JMenu jMenuReunion;
