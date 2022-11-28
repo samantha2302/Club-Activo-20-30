@@ -189,12 +189,12 @@
                     <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuAgreCamaraMousePressed"/>
                   </Events>
                 </Menu>
-                <Menu class="javax.swing.JMenu" name="jMenuAgreSocio">
+                <Menu class="javax.swing.JMenu" name="jMenuAgreSocioEvento">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Agregar socio"/>
+                    <Property name="text" type="java.lang.String" value="Agregar socio a Evento"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuAgreSocioMousePressed"/>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuAgreSocioEventoMousePressed"/>
                   </Events>
                 </Menu>
                 <Menu class="javax.swing.JMenu" name="jMenuAgregarEvento">
