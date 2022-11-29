@@ -26,6 +26,8 @@ import agregar_datos.agregar_socio;
 import agregar_datos.agregar_socio_a_evento;
 import agregar_datos.agregar_tipo_proyecto;
 import agregar_datos.agregar_voluntario;
+import consultas.*;
+import eliminar_datos.*;
 import java.awt.Color;
 import java.awt.Image;
 import javax.swing.Icon;
@@ -424,42 +426,102 @@ public class menu_principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenuInsertar);
 
         jMenuEliminar.setText("Eliminar");
+        jMenuEliminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuEliminarMousePressed(evt);
+            }
+        });
 
         jMenu20.setText("Socio");
+        jMenu20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu20MousePressed(evt);
+            }
+        });
         jMenuEliminar.add(jMenu20);
 
         jMenu21.setText("Proyecto");
+        jMenu21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu21MousePressed(evt);
+            }
+        });
 
         jMenu40.setText("Tipo");
+        jMenu40.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu40MousePressed(evt);
+            }
+        });
         jMenu21.add(jMenu40);
 
         jMenu41.setText("Categoria");
+        jMenu41.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu41MousePressed(evt);
+            }
+        });
         jMenu21.add(jMenu41);
 
         jMenuEliminar.add(jMenu21);
 
         jMenu22.setText("Patrocinador");
+        jMenu22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu22MousePressed(evt);
+            }
+        });
         jMenuEliminar.add(jMenu22);
 
         jMenu23.setText("Beneficiario");
+        jMenu23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu23MousePressed(evt);
+            }
+        });
         jMenuEliminar.add(jMenu23);
 
         jMenu24.setText("Reunión");
 
         jMenu42.setText("Club");
+        jMenu42.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu42MousePressed(evt);
+            }
+        });
         jMenu24.add(jMenu42);
 
         jMenu43.setText("Nacional e Internacional");
+        jMenu43.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu43MousePressed(evt);
+            }
+        });
         jMenu24.add(jMenu43);
 
         jMenuEliminar.add(jMenu24);
 
         jMenu25.setText("Voluntario");
+        jMenu25.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu25MousePressed(evt);
+            }
+        });
         jMenuEliminar.add(jMenu25);
 
         jMenu26.setText("Evento");
+        jMenu26.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu26MousePressed(evt);
+            }
+        });
 
         jMenu44.setText("Camaradería");
+        jMenu44.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu44MousePressed(evt);
+            }
+        });
         jMenu26.add(jMenu44);
 
         jMenu45.setText("Eliminar miembro");
@@ -468,20 +530,45 @@ public class menu_principal extends javax.swing.JFrame {
         jMenuEliminar.add(jMenu26);
 
         jMenu14.setText("Club");
+        jMenu14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu14MousePressed(evt);
+            }
+        });
         jMenuEliminar.add(jMenu14);
 
         jMenu15.setText("Redes Sociales");
+        jMenu15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu15MousePressed(evt);
+            }
+        });
         jMenuEliminar.add(jMenu15);
 
         jMenu16.setText("Pagos");
 
         jMenu1.setText("Membresía");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu1MousePressed(evt);
+            }
+        });
         jMenu16.add(jMenu1);
 
         jMenu2.setText("Nacional");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu2MousePressed(evt);
+            }
+        });
         jMenu16.add(jMenu2);
 
         jMenu7.setText("Regular");
+        jMenu7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu7MousePressed(evt);
+            }
+        });
         jMenu16.add(jMenu7);
 
         jMenuEliminar.add(jMenu16);
@@ -489,17 +576,37 @@ public class menu_principal extends javax.swing.JFrame {
         jMenu17.setText("Entradas");
 
         jMenu8.setText("Económicas");
+        jMenu8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu8MousePressed(evt);
+            }
+        });
         jMenu17.add(jMenu8);
 
         jMenu9.setText("Especies");
+        jMenu9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu9MousePressed(evt);
+            }
+        });
         jMenu17.add(jMenu9);
 
         jMenuEliminar.add(jMenu17);
 
         jMenu18.setText("Gastos");
+        jMenu18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu18MousePressed(evt);
+            }
+        });
         jMenuEliminar.add(jMenu18);
 
         jMenu19.setText("Junta Directiva");
+        jMenu19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu19MousePressed(evt);
+            }
+        });
         jMenuEliminar.add(jMenu19);
 
         jMenuBar1.add(jMenuEliminar);
@@ -699,33 +806,86 @@ public class menu_principal extends javax.swing.JFrame {
         jMenuConsultas.setText("Consultas");
 
         jMenu34.setText("Miembros y club ");
+        jMenu34.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu34MousePressed(evt);
+            }
+        });
         jMenuConsultas.add(jMenu34);
 
         jMenu35.setText("Reuniones del club");
+        jMenu35.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu35MousePressed(evt);
+            }
+        });
         jMenuConsultas.add(jMenu35);
 
         jMenu36.setText("Proyecto y patrocinio");
+        jMenu36.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu36MousePressed(evt);
+            }
+        });
         jMenuConsultas.add(jMenu36);
 
         jMenu37.setText("Proyectos de  recreación");
+        jMenu37.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu37MousePressed(evt);
+            }
+        });
         jMenuConsultas.add(jMenu37);
 
         jMenu38.setText("Conferencias");
+        jMenu38.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu38MousePressed(evt);
+            }
+        });
         jMenuConsultas.add(jMenu38);
 
-        jMenu39.setText("jMenu39");
+        jMenu39.setText("Redes Sociales");
+        jMenu39.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu39MousePressed(evt);
+            }
+        });
         jMenuConsultas.add(jMenu39);
 
-        jMenu52.setText("jMenu52");
+        jMenu52.setText("Pagos de Membresia");
+        jMenu52.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu52MousePressed(evt);
+            }
+        });
         jMenuConsultas.add(jMenu52);
 
-        jMenu53.setText("jMenu53");
+        jMenu53.setText("Proyectos de Educacion ");
+        jMenu53.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu53MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jMenu53MouseReleased(evt);
+            }
+        });
         jMenuConsultas.add(jMenu53);
 
-        jMenu54.setText("jMenu54");
+        jMenu54.setText("Pagos Nacionales");
+        jMenu54.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu54MousePressed(evt);
+            }
+        });
         jMenuConsultas.add(jMenu54);
 
-        jMenu55.setText("jMenu55");
+        jMenu55.setText("Clubes");
+        jMenu55.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu55MousePressed(evt);
+            }
+        });
         jMenuConsultas.add(jMenu55);
 
         jMenuBar1.add(jMenuConsultas);
@@ -992,9 +1152,225 @@ public class menu_principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_modificarJuntaDirectivaMousePressed
 
-    /**
-     * @param args the command line arguments
-     */
+    // ------------------------------------ Eliminar -------------------------------------------------
+    private void jMenuEliminarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuEliminarMousePressed
+        
+    }//GEN-LAST:event_jMenuEliminarMousePressed
+
+    private void jMenu21MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu21MousePressed
+        eliminar_project ep = new eliminar_project();
+        escritorioMenu.add(ep);
+        ep.setVisible(true);
+        ep.setLocation(60, 100);
+    }//GEN-LAST:event_jMenu21MousePressed
+
+    private void jMenu40MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu40MousePressed
+        eliminar_type_project etp = new eliminar_type_project();
+        escritorioMenu.add(etp);
+        etp.setVisible(true);
+        etp.setLocation(50, 100);
+    }//GEN-LAST:event_jMenu40MousePressed
+
+    private void jMenu20MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu20MousePressed
+        eliminar_miembro em = new eliminar_miembro();
+        escritorioMenu.add(em);
+        em.setVisible(true);
+        em.setLocation(50, 100);
+    }//GEN-LAST:event_jMenu20MousePressed
+
+    private void jMenu41MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu41MousePressed
+        eliminar_CategoryProject ecp = new eliminar_CategoryProject();
+        escritorioMenu.add(ecp);
+        ecp.setVisible(true);
+        ecp.setLocation(50, 100);
+    }//GEN-LAST:event_jMenu41MousePressed
+
+    private void jMenu22MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu22MousePressed
+        eliminar_sponsor es = new eliminar_sponsor();
+        escritorioMenu.add(es);
+        es.setVisible(true);
+        es.setLocation(50, 100);
+    }//GEN-LAST:event_jMenu22MousePressed
+
+    private void jMenu23MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu23MousePressed
+        eliminar_beneficiary eb = new eliminar_beneficiary();
+        escritorioMenu.add(eb);
+        eb.setVisible(true);
+        eb.setLocation(50, 100);
+    }//GEN-LAST:event_jMenu23MousePressed
+
+    private void jMenu42MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu42MousePressed
+        eliminar_clubMeeting ecm = new eliminar_clubMeeting();
+        escritorioMenu.add(ecm);
+        ecm.setVisible(true);
+        ecm.setLocation(50, 100);
+    }//GEN-LAST:event_jMenu42MousePressed
+
+    private void jMenu43MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu43MousePressed
+        eliminar_nationalOrIntenationaMeeting enim = new eliminar_nationalOrIntenationaMeeting();
+        escritorioMenu.add(enim);
+        enim.setVisible(true);
+        enim.setLocation(50, 100);
+    }//GEN-LAST:event_jMenu43MousePressed
+
+    private void jMenu25MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu25MousePressed
+        eliminar_volunteer ev = new eliminar_volunteer();
+        escritorioMenu.add(ev);
+        ev.setVisible(true);
+        ev.setLocation(50, 100);
+    }//GEN-LAST:event_jMenu25MousePressed
+
+    private void jMenu26MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu26MousePressed
+        eliminar_event ee = new eliminar_event();
+        escritorioMenu.add(ee);
+        ee.setVisible(true);
+        ee.setLocation(50, 100);
+    }//GEN-LAST:event_jMenu26MousePressed
+
+    private void jMenu44MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu44MousePressed
+        eliminar_camaraderie ec = new eliminar_camaraderie();
+        escritorioMenu.add(ec);
+        ec.setVisible(true);
+        ec.setLocation(50, 100);
+    }//GEN-LAST:event_jMenu44MousePressed
+
+    private void jMenu14MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu14MousePressed
+        eliminar_club ec = new eliminar_club();
+        escritorioMenu.add(ec);
+        ec.setVisible(true);
+        ec.setLocation(50, 100);
+    }//GEN-LAST:event_jMenu14MousePressed
+
+    private void jMenu15MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu15MousePressed
+        eliminar_social_media esm = new eliminar_social_media();
+        escritorioMenu.add(esm);
+        esm.setVisible(true);
+        esm.setLocation(50, 100);
+    }//GEN-LAST:event_jMenu15MousePressed
+
+    private void jMenu7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu7MousePressed
+        eliminar_payment ep = new eliminar_payment();
+        escritorioMenu.add(ep);
+        ep.setVisible(true);
+        ep.setLocation(60, 100);
+    }//GEN-LAST:event_jMenu7MousePressed
+
+    private void jMenu2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MousePressed
+        eliminar_payment_to_national eptn = new eliminar_payment_to_national();
+        escritorioMenu.add(eptn);
+        eptn.setVisible(true);
+        eptn.setLocation(60, 100);
+    }//GEN-LAST:event_jMenu2MousePressed
+
+    private void jMenu1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MousePressed
+        eliminar_membershipPayment emsp = new eliminar_membershipPayment();
+        escritorioMenu.add(emsp);
+        emsp.setVisible(true);
+        emsp.setLocation(60, 100);
+    }//GEN-LAST:event_jMenu1MousePressed
+
+    private void jMenu8MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu8MousePressed
+        eliminar_economicEntry eee = new eliminar_economicEntry();
+        escritorioMenu.add(eee);
+        eee.setVisible(true);
+        eee.setLocation(60, 100);
+    }//GEN-LAST:event_jMenu8MousePressed
+
+    private void jMenu9MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu9MousePressed
+        eliminar_other_donations eod = new eliminar_other_donations();
+        escritorioMenu.add(eod);
+        eod.setVisible(true);
+        eod.setLocation(60, 100);
+    }//GEN-LAST:event_jMenu9MousePressed
+
+    private void jMenu18MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu18MousePressed
+        eliminar_BillPayment ebp = new eliminar_BillPayment();
+        escritorioMenu.add(ebp);
+        ebp.setVisible(true);
+        ebp.setLocation(60, 100);
+    }//GEN-LAST:event_jMenu18MousePressed
+
+    private void jMenu19MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu19MousePressed
+        eliminar_boardOfDirectors ebod = new eliminar_boardOfDirectors();
+        escritorioMenu.add(ebod);
+        ebod.setVisible(true);
+        ebod.setLocation(60, 100);
+    }//GEN-LAST:event_jMenu19MousePressed
+    // ----------------------------- consultas -----------------------------------
+    private void jMenu34MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu34MousePressed
+        Consulta_1 consulta = new Consulta_1();
+        escritorioMenu.add(consulta);
+        consulta.setVisible(true);
+        consulta.setLocation(20, 10);
+    }//GEN-LAST:event_jMenu34MousePressed
+
+    private void jMenu35MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu35MousePressed
+        Consulta_2 consulta = new Consulta_2();
+        escritorioMenu.add(consulta);
+        consulta.setVisible(true);
+        consulta.setLocation(20, 10);
+    }//GEN-LAST:event_jMenu35MousePressed
+
+    private void jMenu36MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu36MousePressed
+        Consulta_3 consulta = new Consulta_3();
+        escritorioMenu.add(consulta);
+        consulta.setVisible(true);
+        consulta.setLocation(20, 10);
+    }//GEN-LAST:event_jMenu36MousePressed
+
+    private void jMenu37MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu37MousePressed
+        Consulta_4 consulta = new Consulta_4();
+        escritorioMenu.add(consulta);
+        consulta.setVisible(true);
+        consulta.setLocation(20, 10);
+    }//GEN-LAST:event_jMenu37MousePressed
+
+    private void jMenu38MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu38MousePressed
+        Consulta_5 consulta = new Consulta_5();
+        escritorioMenu.add(consulta);
+        consulta.setVisible(true);
+        consulta.setLocation(20, 10);
+    }//GEN-LAST:event_jMenu38MousePressed
+
+    private void jMenu39MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu39MousePressed
+        Consulta_6 consulta = new Consulta_6();
+        escritorioMenu.add(consulta);
+        consulta.setVisible(true);
+        consulta.setLocation(20, 10);
+    }//GEN-LAST:event_jMenu39MousePressed
+
+    private void jMenu52MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu52MousePressed
+        Consulta_7 consulta = new Consulta_7();
+        escritorioMenu.add(consulta);
+        consulta.setVisible(true);
+        consulta.setLocation(20, 10);
+    }//GEN-LAST:event_jMenu52MousePressed
+
+    private void jMenu53MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu53MouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu53MouseReleased
+
+    private void jMenu53MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu53MousePressed
+        Consulta_8 consulta = new Consulta_8();
+        escritorioMenu.add(consulta);
+        consulta.setVisible(true);
+        consulta.setLocation(20, 10);
+    }//GEN-LAST:event_jMenu53MousePressed
+
+    private void jMenu54MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu54MousePressed
+        Consulta_9 consulta = new Consulta_9();
+        escritorioMenu.add(consulta);
+        consulta.setVisible(true);
+        consulta.setLocation(20, 10);
+    }//GEN-LAST:event_jMenu54MousePressed
+
+    private void jMenu55MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu55MousePressed
+        Consulta_10 consulta = new Consulta_10();
+        escritorioMenu.add(consulta);
+        consulta.setVisible(true);
+        consulta.setLocation(20, 10);
+    }//GEN-LAST:event_jMenu55MousePressed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
