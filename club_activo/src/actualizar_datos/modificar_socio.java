@@ -1,21 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package actualizar_datos;
 
 
-import agregar_datos.*;
 import javax.swing.JTextField;
 import sql.crudsql;
 
 
-
-/**
- *
- * @author Katherine
- */
 public class modificar_socio extends javax.swing.JInternalFrame {
     private JTextField tf;
     /**
@@ -191,7 +181,7 @@ public class modificar_socio extends javax.swing.JInternalFrame {
         btnGuardar.setBackground(new java.awt.Color(36, 52, 84));
         btnGuardar.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         btnGuardar.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardar.setText("Guardar");
+        btnGuardar.setText("Modificar");
         btnGuardar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

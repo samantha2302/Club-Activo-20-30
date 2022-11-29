@@ -1,10 +1,27 @@
 
 package ventana_menu;
 
+import actualizar_datos.modificar_beneficiario;
+import actualizar_datos.modificar_camaraderia;
 import actualizar_datos.modificar_categoria_proyecto;
+import actualizar_datos.modificar_club;
+import actualizar_datos.modificar_entrada_economica;
+import actualizar_datos.modificar_entrada_especie;
+import actualizar_datos.modificar_evento;
+import actualizar_datos.modificar_gasto;
+import actualizar_datos.modificar_junta_directiva;
+import actualizar_datos.modificar_pago_membresia;
+import actualizar_datos.modificar_pago_nacional;
+import actualizar_datos.modificar_pago_regular;
+import actualizar_datos.modificar_patrocinador;
 import actualizar_datos.modificar_proyecto;
+import actualizar_datos.modificar_red_social;
+import actualizar_datos.modificar_reunion_club;
+import actualizar_datos.modificar_reunion_internacional;
 import actualizar_datos.modificar_socio;
+import actualizar_datos.modificar_socio_a_evento;
 import actualizar_datos.modificar_tipo_proyecto;
+import actualizar_datos.modificar_voluntario;
 import agregar_datos.agregar_beneficiario;
 import agregar_datos.agregar_camaraderia;
 import agregar_datos.agregar_categoria_proyecto;
@@ -925,71 +942,122 @@ public class menu_principal extends javax.swing.JFrame {
     }//GEN-LAST:event_modificarProyectoMousePressed
 
     private void modificarPatrocinadorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarPatrocinadorMousePressed
-        // TODO add your handling code here:
+        modificar_patrocinador pat=new modificar_patrocinador();
+        escritorioMenu.add(pat);
+        pat.setVisible(true);
+        pat.setLocation(130,35);
     }//GEN-LAST:event_modificarPatrocinadorMousePressed
 
     private void modificarBeneficiarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarBeneficiarioMousePressed
-        // TODO add your handling code here:
+        modificar_beneficiario bene = new modificar_beneficiario();
+        escritorioMenu.add(bene);
+        bene.setVisible(true);
+        bene.setLocation(125, 20);
     }//GEN-LAST:event_modificarBeneficiarioMousePressed
 
     private void modificarReunionClubMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarReunionClubMousePressed
-        // TODO add your handling code here:
+        modificar_reunion_club clubReu = new modificar_reunion_club();
+        escritorioMenu.add(clubReu);
+        clubReu.setVisible(true);
+        clubReu.setLocation(95, 10);
     }//GEN-LAST:event_modificarReunionClubMousePressed
 
     private void modificarReunionNacIntMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarReunionNacIntMousePressed
-        // TODO add your handling code here:
+        modificar_reunion_internacional nacio=new modificar_reunion_internacional();
+        escritorioMenu.add(nacio);
+        nacio.setVisible(true);
+        nacio.setLocation(105,30);
     }//GEN-LAST:event_modificarReunionNacIntMousePressed
 
     private void modificarVoluntarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarVoluntarioMousePressed
-        // TODO add your handling code here:
+        modificar_voluntario vol=new modificar_voluntario();
+        escritorioMenu.add(vol);
+        vol.setVisible(true);
+        vol.setLocation(135,40);
     }//GEN-LAST:event_modificarVoluntarioMousePressed
 
     private void modificarCamaraderiaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarCamaraderiaMousePressed
-        // TODO add your handling code here:
+        modificar_camaraderia cam = new modificar_camaraderia();
+        escritorioMenu.add(cam);
+        cam.setVisible(true);
+        cam.setLocation(170,10);
     }//GEN-LAST:event_modificarCamaraderiaMousePressed
 
     private void modificarMiembroenEventoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarMiembroenEventoMousePressed
-        // TODO add your handling code here:
+        modificar_socio_a_evento ase=new modificar_socio_a_evento();
+        escritorioMenu.add(ase);
+        ase.setVisible(true);
+        ase.setLocation(170,50);
     }//GEN-LAST:event_modificarMiembroenEventoMousePressed
 
     private void modificarEventoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarEventoMousePressed
-        // TODO add your handling code here:
+        modificar_evento event =new modificar_evento();
+        escritorioMenu.add(event);
+        event.setVisible(true);
+        event.setLocation(150,70);
     }//GEN-LAST:event_modificarEventoMousePressed
 
     private void modificarClubMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarClubMousePressed
-        // TODO add your handling code here:
+        modificar_club club =new modificar_club();
+        escritorioMenu.add(club);
+        club.setVisible(true);
+        club.setLocation(150,70);
     }//GEN-LAST:event_modificarClubMousePressed
 
     private void modificarRedSocialMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarRedSocialMousePressed
-        // TODO add your handling code here:
+        modificar_red_social red=new modificar_red_social();
+        escritorioMenu.add(red);
+        red.setVisible(true);
+        red.setLocation(190,30);
     }//GEN-LAST:event_modificarRedSocialMousePressed
 
     private void modificarPagoMembresiaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarPagoMembresiaMousePressed
-        // TODO add your handling code here:
+        modificar_pago_membresia mem=new modificar_pago_membresia();
+        escritorioMenu.add(mem);
+        mem.setVisible(true);
+        mem.setLocation(120,50);
     }//GEN-LAST:event_modificarPagoMembresiaMousePressed
 
     private void modificarPagoNacionalMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarPagoNacionalMousePressed
-        // TODO add your handling code here:
+        modificar_pago_nacional naci=new modificar_pago_nacional();
+        escritorioMenu.add(naci);
+        naci.setVisible(true);
+        naci.setLocation(120,50);
     }//GEN-LAST:event_modificarPagoNacionalMousePressed
 
     private void modificarPagoRegularMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarPagoRegularMousePressed
-        // TODO add your handling code here:
+        modificar_pago_regular regu=new modificar_pago_regular();
+        escritorioMenu.add(regu);
+        regu.setVisible(true);
+        regu.setLocation(120,50);
     }//GEN-LAST:event_modificarPagoRegularMousePressed
 
     private void modificarEntradaEconomicaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarEntradaEconomicaMousePressed
-        // TODO add your handling code here:
+        modificar_entrada_economica eco= new modificar_entrada_economica();
+        escritorioMenu.add(eco);
+        eco.setVisible(true);
+        eco.setLocation(190,5);
     }//GEN-LAST:event_modificarEntradaEconomicaMousePressed
 
     private void modificarEntradaEspecieMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarEntradaEspecieMousePressed
-        // TODO add your handling code here:
+        modificar_entrada_especie espe=new modificar_entrada_especie();
+        escritorioMenu.add(espe);
+        espe.setVisible(true);
+        espe.setLocation(190,5);
     }//GEN-LAST:event_modificarEntradaEspecieMousePressed
 
     private void modificarGastosMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarGastosMousePressed
-        // TODO add your handling code here:
+        modificar_gasto gasto=new modificar_gasto();
+        escritorioMenu.add(gasto);
+        gasto.setVisible(true);
+        gasto.setLocation(140,10);
     }//GEN-LAST:event_modificarGastosMousePressed
 
     private void modificarJuntaDirectivaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarJuntaDirectivaMousePressed
-        // TODO add your handling code here:
+        modificar_junta_directiva junta=new modificar_junta_directiva();
+        escritorioMenu.add(junta);
+        junta.setVisible(true);
+        junta.setLocation(50,20);
     }//GEN-LAST:event_modificarJuntaDirectivaMousePressed
 
     /**

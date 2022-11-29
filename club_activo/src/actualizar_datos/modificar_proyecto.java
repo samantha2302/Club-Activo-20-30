@@ -27,7 +27,7 @@ public class modificar_proyecto extends javax.swing.JInternalFrame {
         nombre = new javax.swing.JTextField();
         descripcion = new javax.swing.JTextField();
         horas = new javax.swing.JTextField();
-        btnAgregar = new javax.swing.JButton();
+        btnModificar = new javax.swing.JButton();
         numero1 = new javax.swing.JTextField();
 
         jPanel1.setBackground(new java.awt.Color(85, 124, 152));
@@ -73,14 +73,14 @@ public class modificar_proyecto extends javax.swing.JInternalFrame {
         horas.setForeground(new java.awt.Color(255, 255, 255));
         horas.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Horas Invertidas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Black", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        btnAgregar.setBackground(new java.awt.Color(36, 52, 84));
-        btnAgregar.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        btnAgregar.setForeground(new java.awt.Color(255, 255, 255));
-        btnAgregar.setText("Agregar Proyecto");
-        btnAgregar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+        btnModificar.setBackground(new java.awt.Color(36, 52, 84));
+        btnModificar.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnModificar.setForeground(new java.awt.Color(255, 255, 255));
+        btnModificar.setText("Modificar Proyecto");
+        btnModificar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarActionPerformed(evt);
+                btnModificarActionPerformed(evt);
             }
         });
 
@@ -116,7 +116,7 @@ public class modificar_proyecto extends javax.swing.JInternalFrame {
                         .addContainerGap(14, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAgregar)
+                        .addComponent(btnModificar)
                         .addGap(67, 67, 67))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -140,7 +140,7 @@ public class modificar_proyecto extends javax.swing.JInternalFrame {
                     .addComponent(total, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(horas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(64, Short.MAX_VALUE))
         );
@@ -159,16 +159,16 @@ public class modificar_proyecto extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         //(numero.getText(),nombre.getText(),descripcion.getText(),horas.getText(),fecha.getText(),beneN.getText(),beneAdul.getText(),total.getText());
         
-    }//GEN-LAST:event_btnAgregarActionPerformed
+    }//GEN-LAST:event_btnModificarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField beneAdul;
     private javax.swing.JTextField beneN;
-    private javax.swing.JButton btnAgregar;
+    private javax.swing.JButton btnModificar;
     private javax.swing.JTextField descripcion;
     private javax.swing.JTextField fecha;
     private javax.swing.JTextField horas;
