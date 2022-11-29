@@ -13,6 +13,7 @@ public class Consulta_2 extends javax.swing.JInternalFrame {
 
     public Consulta_2() {
         initComponents();
+        this.setClosable(true);
     }
 
     public void mostrar(){
@@ -24,7 +25,7 @@ public class Consulta_2 extends javax.swing.JInternalFrame {
         tablaC1.addColumn("Nombre del Club");
         Tabla_consulta2.setModel(tablaC1);
         
-        String []datos = new String[4]; // Es el numero de columnas que retorna el query
+        String []datos = new String[3]; // Es el numero de columnas que retorna el query
         
         try{
            
@@ -36,7 +37,6 @@ public class Consulta_2 extends javax.swing.JInternalFrame {
                 datos[0] = resultado.getString(1);
                 datos[1] = resultado.getString(2);
                 datos[2] = resultado.getString(3);
-                datos[3] = resultado.getString(4);
                 tablaC1.addRow(datos);
             }
         } catch(Exception e){

@@ -437,106 +437,167 @@
             <Property name="text" type="java.lang.String" value="Actualizar"/>
           </Properties>
           <SubComponents>
-            <Menu class="javax.swing.JMenu" name="jMenu27">
+            <Menu class="javax.swing.JMenu" name="modificarSocio">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Socio"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarSocioMousePressed"/>
+              </Events>
             </Menu>
             <Menu class="javax.swing.JMenu" name="jMenu28">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Proyecto"/>
               </Properties>
               <SubComponents>
-                <Menu class="javax.swing.JMenu" name="jMenu50">
+                <Menu class="javax.swing.JMenu" name="modificarTipoProyecto">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Tipo"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarTipoProyectoMousePressed"/>
+                  </Events>
                 </Menu>
-                <Menu class="javax.swing.JMenu" name="jMenu51">
+                <Menu class="javax.swing.JMenu" name="modificarCatergoriaProyecto">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Categor&#xed;a"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarCatergoriaProyectoMousePressed"/>
+                  </Events>
+                </Menu>
+                <Menu class="javax.swing.JMenu" name="modificarProyecto">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Modificar Proyecto"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarProyectoMousePressed"/>
+                  </Events>
                 </Menu>
               </SubComponents>
             </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu29">
+            <Menu class="javax.swing.JMenu" name="modificarPatrocinador">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Patrocinador"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarPatrocinadorMousePressed"/>
+              </Events>
             </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu30">
+            <Menu class="javax.swing.JMenu" name="modificarBeneficiario">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Beneficiario"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarBeneficiarioMousePressed"/>
+              </Events>
             </Menu>
             <Menu class="javax.swing.JMenu" name="jMenu31">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Reuni&#xf3;n"/>
               </Properties>
               <SubComponents>
-                <Menu class="javax.swing.JMenu" name="jMenu48">
+                <Menu class="javax.swing.JMenu" name="modificarReunionClub">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Club"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarReunionClubMousePressed"/>
+                  </Events>
                 </Menu>
-                <Menu class="javax.swing.JMenu" name="jMenu49">
+                <Menu class="javax.swing.JMenu" name="modificarReunionNacInt">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Nacional e Internacional"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarReunionNacIntMousePressed"/>
+                  </Events>
                 </Menu>
               </SubComponents>
             </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu32">
+            <Menu class="javax.swing.JMenu" name="modificarVoluntario">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Voluntario"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarVoluntarioMousePressed"/>
+              </Events>
             </Menu>
             <Menu class="javax.swing.JMenu" name="jMenu33">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Evento"/>
               </Properties>
               <SubComponents>
-                <Menu class="javax.swing.JMenu" name="jMenu46">
+                <Menu class="javax.swing.JMenu" name="modificarCamaraderia">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Camarader&#xed;a"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarCamaraderiaMousePressed"/>
+                  </Events>
                 </Menu>
-                <Menu class="javax.swing.JMenu" name="jMenu47">
+                <Menu class="javax.swing.JMenu" name="modificarMiembroenEvento">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cambiar miembro"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarMiembroenEventoMousePressed"/>
+                  </Events>
+                </Menu>
+                <Menu class="javax.swing.JMenu" name="modificarEvento">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Modificar Evento"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarEventoMousePressed"/>
+                  </Events>
                 </Menu>
               </SubComponents>
             </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu56">
+            <Menu class="javax.swing.JMenu" name="modificarClub">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Club"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarClubMousePressed"/>
+              </Events>
             </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu57">
+            <Menu class="javax.swing.JMenu" name="modificarRedSocial">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Redes Sociales"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarRedSocialMousePressed"/>
+              </Events>
             </Menu>
             <Menu class="javax.swing.JMenu" name="jMenu58">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Pagos"/>
               </Properties>
               <SubComponents>
-                <Menu class="javax.swing.JMenu" name="jMenu10">
+                <Menu class="javax.swing.JMenu" name="modificarPagoMembresia">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Membres&#xed;a"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarPagoMembresiaMousePressed"/>
+                  </Events>
                 </Menu>
-                <Menu class="javax.swing.JMenu" name="jMenu11">
+                <Menu class="javax.swing.JMenu" name="modificarPagoNacional">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Nacional"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarPagoNacionalMousePressed"/>
+                  </Events>
                 </Menu>
-                <Menu class="javax.swing.JMenu" name="jMenu12">
+                <Menu class="javax.swing.JMenu" name="modificarPagoRegular">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Regular"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarPagoRegularMousePressed"/>
+                  </Events>
                 </Menu>
               </SubComponents>
             </Menu>
@@ -545,27 +606,39 @@
                 <Property name="text" type="java.lang.String" value="Entradas"/>
               </Properties>
               <SubComponents>
-                <Menu class="javax.swing.JMenu" name="jMenu13">
+                <Menu class="javax.swing.JMenu" name="modificarEntradaEconomica">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Econ&#xf3;micas"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarEntradaEconomicaMousePressed"/>
+                  </Events>
                 </Menu>
-                <Menu class="javax.swing.JMenu" name="jMenu62">
+                <Menu class="javax.swing.JMenu" name="modificarEntradaEspecie">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Especies"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarEntradaEspecieMousePressed"/>
+                  </Events>
                 </Menu>
               </SubComponents>
             </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu60">
+            <Menu class="javax.swing.JMenu" name="modificarGastos">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Gastos"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarGastosMousePressed"/>
+              </Events>
             </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu61">
+            <Menu class="javax.swing.JMenu" name="modificarJuntaDirectiva">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Junta Directiva"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="modificarJuntaDirectivaMousePressed"/>
+              </Events>
             </Menu>
           </SubComponents>
         </Menu>
