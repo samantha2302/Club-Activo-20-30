@@ -4,9 +4,18 @@ package ventana_menu;
 import agregar_datos.agregar_beneficiario;
 import agregar_datos.agregar_camaraderia;
 import agregar_datos.agregar_categoria_proyecto;
+import agregar_datos.agregar_club;
+import agregar_datos.agregar_entrada_economica;
+import agregar_datos.agregar_entrada_especie;
 import agregar_datos.agregar_evento;
+import agregar_datos.agregar_gasto;
+import agregar_datos.agregar_junta_directiva;
+import agregar_datos.agregar_pago_membresia;
+import agregar_datos.agregar_pago_nacional;
+import agregar_datos.agregar_pago_regular;
 import agregar_datos.agregar_patrocinador;
 import agregar_datos.agregar_proyecto;
+import agregar_datos.agregar_redes_sociales;
 import agregar_datos.agregar_reunion_club;
 import agregar_datos.agregar_reunion_internacional;
 import agregar_datos.agregar_socio;
@@ -707,39 +716,66 @@ public class menu_principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuAgregarEventoMousePressed
 
     private void jMenuAgregarClubMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuAgregarClubMousePressed
-        // TODO add your handling code here:
+        agregar_club club =new agregar_club();
+        escritorioMenu.add(club);
+        club.setVisible(true);
+        club.setLocation(150,70);
     }//GEN-LAST:event_jMenuAgregarClubMousePressed
 
     private void jMenuAgregarRedesSocialesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuAgregarRedesSocialesMousePressed
-        // TODO add your handling code here:
+        agregar_redes_sociales red=new agregar_redes_sociales();
+        escritorioMenu.add(red);
+        red.setVisible(true);
+        red.setLocation(190,30);
     }//GEN-LAST:event_jMenuAgregarRedesSocialesMousePressed
 
     private void jMenuAgregarPagoMembresiaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuAgregarPagoMembresiaMousePressed
-        // TODO add your handling code here:
+        agregar_pago_membresia mem=new agregar_pago_membresia();
+        escritorioMenu.add(mem);
+        mem.setVisible(true);
+        mem.setLocation(120,50);
     }//GEN-LAST:event_jMenuAgregarPagoMembresiaMousePressed
 
     private void jMenuAgregarPagoaNacionalMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuAgregarPagoaNacionalMousePressed
-        // TODO add your handling code here:
+        agregar_pago_nacional naci=new agregar_pago_nacional();
+        escritorioMenu.add(naci);
+        naci.setVisible(true);
+        naci.setLocation(120,50);
     }//GEN-LAST:event_jMenuAgregarPagoaNacionalMousePressed
 
     private void jMenuAgregarPagoRegularMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuAgregarPagoRegularMousePressed
-        // TODO add your handling code here:
+        agregar_pago_regular regu=new agregar_pago_regular();
+        escritorioMenu.add(regu);
+        regu.setVisible(true);
+        regu.setLocation(120,50);
     }//GEN-LAST:event_jMenuAgregarPagoRegularMousePressed
 
     private void jMenuAgregarEntradaEconomicaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuAgregarEntradaEconomicaMousePressed
-        // TODO add your handling code here:
+        agregar_entrada_economica eco= new agregar_entrada_economica();
+        escritorioMenu.add(eco);
+        eco.setVisible(true);
+        eco.setLocation(190,5);
     }//GEN-LAST:event_jMenuAgregarEntradaEconomicaMousePressed
 
     private void jMenuEntradaEspecieMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuEntradaEspecieMousePressed
-        // TODO add your handling code here:
+        agregar_entrada_especie espe=new agregar_entrada_especie();
+        escritorioMenu.add(espe);
+        espe.setVisible(true);
+        espe.setLocation(190,5);
     }//GEN-LAST:event_jMenuEntradaEspecieMousePressed
 
     private void jMenuAgreagarGastoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuAgreagarGastoMousePressed
-        // TODO add your handling code here:
+        agregar_gasto gasto=new agregar_gasto();
+        escritorioMenu.add(gasto);
+        gasto.setVisible(true);
+        gasto.setLocation(140,10);
     }//GEN-LAST:event_jMenuAgreagarGastoMousePressed
 
     private void jMenuAgregarJuntaDirectivaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuAgregarJuntaDirectivaMousePressed
-        // TODO add your handling code here:
+        agregar_junta_directiva junta=new agregar_junta_directiva();
+        escritorioMenu.add(junta);
+        junta.setVisible(true);
+        junta.setLocation(50,20);
     }//GEN-LAST:event_jMenuAgregarJuntaDirectivaMousePressed
 
     /**
