@@ -5,18 +5,18 @@
  */
 package eliminar_datos;
 
-import entidades.Club;
+import entidades.SocialMedia;
 
 /**
  *
  * @author Sam
  */
-public class eliminar_club extends javax.swing.JInternalFrame {
+public class eliminar_social_media extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form eliminar_club
+     * Creates new form eliminar_social_media
      */
-    public eliminar_club() {
+    public eliminar_social_media() {
         initComponents();
     }
 
@@ -30,20 +30,19 @@ public class eliminar_club extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextFieldC = new javax.swing.JTextField();
+        jTextFieldSM = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(87, 124, 152));
-        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTextFieldC.setBackground(new java.awt.Color(87, 124, 152));
-        jTextFieldC.setForeground(new java.awt.Color(255, 255, 255));
-        jTextFieldC.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Id del Club a Eliminar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Black", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jTextFieldSM.setBackground(new java.awt.Color(87, 124, 152));
+        jTextFieldSM.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldSM.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Id de la Red Social a Eliminar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Black", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        jButton1.setBackground(new java.awt.Color(36, 51, 83));
+        jButton1.setBackground(new java.awt.Color(36, 52, 84));
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Eliminar Club");
+        jButton1.setText("Eliminar Red Social");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -57,21 +56,21 @@ public class eliminar_club extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(76, 76, 76)
+                        .addComponent(jTextFieldSM, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addComponent(jTextFieldC, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(72, Short.MAX_VALUE))
+                        .addGap(121, 121, 121)
+                        .addComponent(jButton1)))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(66, Short.MAX_VALUE)
-                .addComponent(jTextFieldC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
+                .addGap(69, 69, 69)
+                .addComponent(jTextFieldSM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
                 .addComponent(jButton1)
-                .addGap(45, 45, 45))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -89,15 +88,15 @@ public class eliminar_club extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Club club = new Club();
-        int id = Integer.parseInt(jTextFieldC.getText());
-        club.eliminarClub(id);
+        SocialMedia socialM = new SocialMedia();
+        socialM.eliminarSocialMedia(jTextFieldSM.getText());
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextFieldC;
+    private javax.swing.JTextField jTextFieldSM;
     // End of variables declaration//GEN-END:variables
 }
