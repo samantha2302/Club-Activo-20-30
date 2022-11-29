@@ -1,36 +1,30 @@
 package consultas;
 
-import java.sql.*;
-import javax.swing.*;
-import javax.swing.table.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import sql.conexionsql;
 
-
-public class Consulta_1 extends javax.swing.JInternalFrame {
+public class Consulta_2 extends javax.swing.JInternalFrame {
     
     conexionsql con = new conexionsql();
-    
 
-    public Consulta_1() {
+    public Consulta_2() {
         initComponents();
     }
-    
+
     public void mostrar(){
-        String query = "SELECT m.name_member,c.name_club,p.id_project, p.name_project" +
-                "	FROM desarrollo.member m JOIN desarrollo.club c" +
-                "	ON c.id_club = m.id_club" +
-                "	JOIN project p " +
-                "	ON p.id_project = m.id_project" +
-                "	ORDER BY m.name_member";
+        String query = "SELECT * FROM desarrollo.reuniones_de_club()";
         
         DefaultTableModel tablaC1 = new DefaultTableModel();
-        tablaC1.addColumn("Nombre Cliente");
-        tablaC1.addColumn("Nombre Club");
-        tablaC1.addColumn("Id Proyecto");
-        tablaC1.addColumn("Nombre Proyecto");
-        Tabla_consulta1.setModel(tablaC1);
+        tablaC1.addColumn("Fecha");
+        tablaC1.addColumn("Hora");
+        tablaC1.addColumn("Nombre del Club");
+        Tabla_consulta2.setModel(tablaC1);
         
-        String []datos = new String[5]; // Es el numero de columnas que retorna el query
+        String []datos = new String[4]; // Es el numero de columnas que retorna el query
         
         try{
            
@@ -45,28 +39,21 @@ public class Consulta_1 extends javax.swing.JInternalFrame {
                 datos[3] = resultado.getString(4);
                 tablaC1.addRow(datos);
             }
-            
-
-            //Tabla_consulta1.setModel(tablaC1);
-
         } catch(Exception e){
             JOptionPane.showMessageDialog(null, "Error en la consulta"+e, "Mensaje", JOptionPane.ERROR_MESSAGE);
         }
     }
-    
-
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        Tabla_consulta1 = new javax.swing.JTable();
+        Tabla_consulta2 = new javax.swing.JTable();
 
         jPanel1.setBackground(new java.awt.Color(87, 124, 152));
 
-        Tabla_consulta1.setModel(new javax.swing.table.DefaultTableModel(
+        Tabla_consulta2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -74,30 +61,32 @@ public class Consulta_1 extends javax.swing.JInternalFrame {
 
             }
         ));
-        jScrollPane1.setViewportView(Tabla_consulta1);
+        jScrollPane1.setViewportView(Tabla_consulta2);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 548, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(73, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32))
+                .addContainerGap(77, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,7 +98,7 @@ public class Consulta_1 extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable Tabla_consulta1;
+    private javax.swing.JTable Tabla_consulta2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
