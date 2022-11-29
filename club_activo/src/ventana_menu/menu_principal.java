@@ -1,6 +1,10 @@
 
 package ventana_menu;
 
+import actualizar_datos.modificar_categoria_proyecto;
+import actualizar_datos.modificar_proyecto;
+import actualizar_datos.modificar_socio;
+import actualizar_datos.modificar_tipo_proyecto;
 import agregar_datos.agregar_beneficiario;
 import agregar_datos.agregar_camaraderia;
 import agregar_datos.agregar_categoria_proyecto;
@@ -117,30 +121,32 @@ public class menu_principal extends javax.swing.JFrame {
         jMenu18 = new javax.swing.JMenu();
         jMenu19 = new javax.swing.JMenu();
         jMenuActualizar = new javax.swing.JMenu();
-        jMenu27 = new javax.swing.JMenu();
+        modificarSocio = new javax.swing.JMenu();
         jMenu28 = new javax.swing.JMenu();
-        jMenu50 = new javax.swing.JMenu();
-        jMenu51 = new javax.swing.JMenu();
-        jMenu29 = new javax.swing.JMenu();
-        jMenu30 = new javax.swing.JMenu();
+        modificarTipoProyecto = new javax.swing.JMenu();
+        modificarCatergoriaProyecto = new javax.swing.JMenu();
+        modificarProyecto = new javax.swing.JMenu();
+        modificarPatrocinador = new javax.swing.JMenu();
+        modificarBeneficiario = new javax.swing.JMenu();
         jMenu31 = new javax.swing.JMenu();
-        jMenu48 = new javax.swing.JMenu();
-        jMenu49 = new javax.swing.JMenu();
-        jMenu32 = new javax.swing.JMenu();
+        modificarReunionClub = new javax.swing.JMenu();
+        modificarReunionNacInt = new javax.swing.JMenu();
+        modificarVoluntario = new javax.swing.JMenu();
         jMenu33 = new javax.swing.JMenu();
-        jMenu46 = new javax.swing.JMenu();
-        jMenu47 = new javax.swing.JMenu();
-        jMenu56 = new javax.swing.JMenu();
-        jMenu57 = new javax.swing.JMenu();
+        modificarCamaraderia = new javax.swing.JMenu();
+        modificarMiembroenEvento = new javax.swing.JMenu();
+        modificarEvento = new javax.swing.JMenu();
+        modificarClub = new javax.swing.JMenu();
+        modificarRedSocial = new javax.swing.JMenu();
         jMenu58 = new javax.swing.JMenu();
-        jMenu10 = new javax.swing.JMenu();
-        jMenu11 = new javax.swing.JMenu();
-        jMenu12 = new javax.swing.JMenu();
+        modificarPagoMembresia = new javax.swing.JMenu();
+        modificarPagoNacional = new javax.swing.JMenu();
+        modificarPagoRegular = new javax.swing.JMenu();
         jMenu59 = new javax.swing.JMenu();
-        jMenu13 = new javax.swing.JMenu();
-        jMenu62 = new javax.swing.JMenu();
-        jMenu60 = new javax.swing.JMenu();
-        jMenu61 = new javax.swing.JMenu();
+        modificarEntradaEconomica = new javax.swing.JMenu();
+        modificarEntradaEspecie = new javax.swing.JMenu();
+        modificarGastos = new javax.swing.JMenu();
+        modificarJuntaDirectiva = new javax.swing.JMenu();
         jMenuConsultas = new javax.swing.JMenu();
         jMenu34 = new javax.swing.JMenu();
         jMenu35 = new javax.swing.JMenu();
@@ -500,82 +506,193 @@ public class menu_principal extends javax.swing.JFrame {
 
         jMenuActualizar.setText("Actualizar");
 
-        jMenu27.setText("Socio");
-        jMenuActualizar.add(jMenu27);
+        modificarSocio.setText("Socio");
+        modificarSocio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarSocioMousePressed(evt);
+            }
+        });
+        jMenuActualizar.add(modificarSocio);
 
         jMenu28.setText("Proyecto");
 
-        jMenu50.setText("Tipo");
-        jMenu28.add(jMenu50);
+        modificarTipoProyecto.setText("Tipo");
+        modificarTipoProyecto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarTipoProyectoMousePressed(evt);
+            }
+        });
+        jMenu28.add(modificarTipoProyecto);
 
-        jMenu51.setText("Categoría");
-        jMenu28.add(jMenu51);
+        modificarCatergoriaProyecto.setText("Categoría");
+        modificarCatergoriaProyecto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarCatergoriaProyectoMousePressed(evt);
+            }
+        });
+        jMenu28.add(modificarCatergoriaProyecto);
+
+        modificarProyecto.setText("Modificar Proyecto");
+        modificarProyecto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarProyectoMousePressed(evt);
+            }
+        });
+        jMenu28.add(modificarProyecto);
 
         jMenuActualizar.add(jMenu28);
 
-        jMenu29.setText("Patrocinador");
-        jMenuActualizar.add(jMenu29);
+        modificarPatrocinador.setText("Patrocinador");
+        modificarPatrocinador.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarPatrocinadorMousePressed(evt);
+            }
+        });
+        jMenuActualizar.add(modificarPatrocinador);
 
-        jMenu30.setText("Beneficiario");
-        jMenuActualizar.add(jMenu30);
+        modificarBeneficiario.setText("Beneficiario");
+        modificarBeneficiario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarBeneficiarioMousePressed(evt);
+            }
+        });
+        jMenuActualizar.add(modificarBeneficiario);
 
         jMenu31.setText("Reunión");
 
-        jMenu48.setText("Club");
-        jMenu31.add(jMenu48);
+        modificarReunionClub.setText("Club");
+        modificarReunionClub.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarReunionClubMousePressed(evt);
+            }
+        });
+        jMenu31.add(modificarReunionClub);
 
-        jMenu49.setText("Nacional e Internacional");
-        jMenu31.add(jMenu49);
+        modificarReunionNacInt.setText("Nacional e Internacional");
+        modificarReunionNacInt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarReunionNacIntMousePressed(evt);
+            }
+        });
+        jMenu31.add(modificarReunionNacInt);
 
         jMenuActualizar.add(jMenu31);
 
-        jMenu32.setText("Voluntario");
-        jMenuActualizar.add(jMenu32);
+        modificarVoluntario.setText("Voluntario");
+        modificarVoluntario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarVoluntarioMousePressed(evt);
+            }
+        });
+        jMenuActualizar.add(modificarVoluntario);
 
         jMenu33.setText("Evento");
 
-        jMenu46.setText("Camaradería");
-        jMenu33.add(jMenu46);
+        modificarCamaraderia.setText("Camaradería");
+        modificarCamaraderia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarCamaraderiaMousePressed(evt);
+            }
+        });
+        jMenu33.add(modificarCamaraderia);
 
-        jMenu47.setText("Cambiar miembro");
-        jMenu33.add(jMenu47);
+        modificarMiembroenEvento.setText("Cambiar miembro");
+        modificarMiembroenEvento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarMiembroenEventoMousePressed(evt);
+            }
+        });
+        jMenu33.add(modificarMiembroenEvento);
+
+        modificarEvento.setText("Modificar Evento");
+        modificarEvento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarEventoMousePressed(evt);
+            }
+        });
+        jMenu33.add(modificarEvento);
 
         jMenuActualizar.add(jMenu33);
 
-        jMenu56.setText("Club");
-        jMenuActualizar.add(jMenu56);
+        modificarClub.setText("Club");
+        modificarClub.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarClubMousePressed(evt);
+            }
+        });
+        jMenuActualizar.add(modificarClub);
 
-        jMenu57.setText("Redes Sociales");
-        jMenuActualizar.add(jMenu57);
+        modificarRedSocial.setText("Redes Sociales");
+        modificarRedSocial.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarRedSocialMousePressed(evt);
+            }
+        });
+        jMenuActualizar.add(modificarRedSocial);
 
         jMenu58.setText("Pagos");
 
-        jMenu10.setText("Membresía");
-        jMenu58.add(jMenu10);
+        modificarPagoMembresia.setText("Membresía");
+        modificarPagoMembresia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarPagoMembresiaMousePressed(evt);
+            }
+        });
+        jMenu58.add(modificarPagoMembresia);
 
-        jMenu11.setText("Nacional");
-        jMenu58.add(jMenu11);
+        modificarPagoNacional.setText("Nacional");
+        modificarPagoNacional.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarPagoNacionalMousePressed(evt);
+            }
+        });
+        jMenu58.add(modificarPagoNacional);
 
-        jMenu12.setText("Regular");
-        jMenu58.add(jMenu12);
+        modificarPagoRegular.setText("Regular");
+        modificarPagoRegular.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarPagoRegularMousePressed(evt);
+            }
+        });
+        jMenu58.add(modificarPagoRegular);
 
         jMenuActualizar.add(jMenu58);
 
         jMenu59.setText("Entradas");
 
-        jMenu13.setText("Económicas");
-        jMenu59.add(jMenu13);
+        modificarEntradaEconomica.setText("Económicas");
+        modificarEntradaEconomica.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarEntradaEconomicaMousePressed(evt);
+            }
+        });
+        jMenu59.add(modificarEntradaEconomica);
 
-        jMenu62.setText("Especies");
-        jMenu59.add(jMenu62);
+        modificarEntradaEspecie.setText("Especies");
+        modificarEntradaEspecie.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarEntradaEspecieMousePressed(evt);
+            }
+        });
+        jMenu59.add(modificarEntradaEspecie);
 
         jMenuActualizar.add(jMenu59);
 
-        jMenu60.setText("Gastos");
-        jMenuActualizar.add(jMenu60);
+        modificarGastos.setText("Gastos");
+        modificarGastos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarGastosMousePressed(evt);
+            }
+        });
+        jMenuActualizar.add(modificarGastos);
 
-        jMenu61.setText("Junta Directiva");
-        jMenuActualizar.add(jMenu61);
+        modificarJuntaDirectiva.setText("Junta Directiva");
+        modificarJuntaDirectiva.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                modificarJuntaDirectivaMousePressed(evt);
+            }
+        });
+        jMenuActualizar.add(modificarJuntaDirectiva);
 
         jMenuBar1.add(jMenuActualizar);
 
@@ -778,6 +895,103 @@ public class menu_principal extends javax.swing.JFrame {
         junta.setLocation(50,20);
     }//GEN-LAST:event_jMenuAgregarJuntaDirectivaMousePressed
 
+//--------------------------------ACTUALIZAR/MODIFICAR-------------------------------------------------------------
+    private void modificarSocioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarSocioMousePressed
+        modificar_socio sos = new modificar_socio();
+        escritorioMenu.add(sos);
+        sos.setVisible(true);
+        sos.setLocation(35,5);
+    }//GEN-LAST:event_modificarSocioMousePressed
+
+    private void modificarTipoProyectoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarTipoProyectoMousePressed
+        modificar_tipo_proyecto tip=new modificar_tipo_proyecto();
+        escritorioMenu.add(tip);
+        tip.setVisible(true);
+        tip.setLocation(40,5); 
+    }//GEN-LAST:event_modificarTipoProyectoMousePressed
+
+    private void modificarCatergoriaProyectoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarCatergoriaProyectoMousePressed
+        modificar_categoria_proyecto cat= new modificar_categoria_proyecto();
+        escritorioMenu.add(cat);
+        cat.setVisible(true);
+        cat.setLocation(170,25);
+    }//GEN-LAST:event_modificarCatergoriaProyectoMousePressed
+
+    private void modificarProyectoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarProyectoMousePressed
+        modificar_proyecto proc = new modificar_proyecto();
+        escritorioMenu.add(proc);
+        proc.setVisible(true);
+        proc.setLocation(105,5);
+    }//GEN-LAST:event_modificarProyectoMousePressed
+
+    private void modificarPatrocinadorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarPatrocinadorMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarPatrocinadorMousePressed
+
+    private void modificarBeneficiarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarBeneficiarioMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarBeneficiarioMousePressed
+
+    private void modificarReunionClubMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarReunionClubMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarReunionClubMousePressed
+
+    private void modificarReunionNacIntMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarReunionNacIntMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarReunionNacIntMousePressed
+
+    private void modificarVoluntarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarVoluntarioMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarVoluntarioMousePressed
+
+    private void modificarCamaraderiaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarCamaraderiaMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarCamaraderiaMousePressed
+
+    private void modificarMiembroenEventoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarMiembroenEventoMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarMiembroenEventoMousePressed
+
+    private void modificarEventoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarEventoMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarEventoMousePressed
+
+    private void modificarClubMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarClubMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarClubMousePressed
+
+    private void modificarRedSocialMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarRedSocialMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarRedSocialMousePressed
+
+    private void modificarPagoMembresiaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarPagoMembresiaMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarPagoMembresiaMousePressed
+
+    private void modificarPagoNacionalMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarPagoNacionalMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarPagoNacionalMousePressed
+
+    private void modificarPagoRegularMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarPagoRegularMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarPagoRegularMousePressed
+
+    private void modificarEntradaEconomicaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarEntradaEconomicaMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarEntradaEconomicaMousePressed
+
+    private void modificarEntradaEspecieMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarEntradaEspecieMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarEntradaEspecieMousePressed
+
+    private void modificarGastosMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarGastosMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarGastosMousePressed
+
+    private void modificarJuntaDirectivaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarJuntaDirectivaMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarJuntaDirectivaMousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -821,10 +1035,6 @@ public class menu_principal extends javax.swing.JFrame {
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu10;
-    private javax.swing.JMenu jMenu11;
-    private javax.swing.JMenu jMenu12;
-    private javax.swing.JMenu jMenu13;
     private javax.swing.JMenu jMenu14;
     private javax.swing.JMenu jMenu15;
     private javax.swing.JMenu jMenu16;
@@ -839,13 +1049,9 @@ public class menu_principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu24;
     private javax.swing.JMenu jMenu25;
     private javax.swing.JMenu jMenu26;
-    private javax.swing.JMenu jMenu27;
     private javax.swing.JMenu jMenu28;
-    private javax.swing.JMenu jMenu29;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu30;
     private javax.swing.JMenu jMenu31;
-    private javax.swing.JMenu jMenu32;
     private javax.swing.JMenu jMenu33;
     private javax.swing.JMenu jMenu34;
     private javax.swing.JMenu jMenu35;
@@ -860,25 +1066,14 @@ public class menu_principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu43;
     private javax.swing.JMenu jMenu44;
     private javax.swing.JMenu jMenu45;
-    private javax.swing.JMenu jMenu46;
-    private javax.swing.JMenu jMenu47;
-    private javax.swing.JMenu jMenu48;
-    private javax.swing.JMenu jMenu49;
     private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu50;
-    private javax.swing.JMenu jMenu51;
     private javax.swing.JMenu jMenu52;
     private javax.swing.JMenu jMenu53;
     private javax.swing.JMenu jMenu54;
     private javax.swing.JMenu jMenu55;
-    private javax.swing.JMenu jMenu56;
-    private javax.swing.JMenu jMenu57;
     private javax.swing.JMenu jMenu58;
     private javax.swing.JMenu jMenu59;
     private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu60;
-    private javax.swing.JMenu jMenu61;
-    private javax.swing.JMenu jMenu62;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenu jMenu8;
     private javax.swing.JMenu jMenu9;
@@ -918,6 +1113,27 @@ public class menu_principal extends javax.swing.JFrame {
     private javax.swing.JPopupMenu jPopupMenu4;
     private javax.swing.JLabel lema1;
     private javax.swing.JLabel lema2;
+    private javax.swing.JMenu modificarBeneficiario;
+    private javax.swing.JMenu modificarCamaraderia;
+    private javax.swing.JMenu modificarCatergoriaProyecto;
+    private javax.swing.JMenu modificarClub;
+    private javax.swing.JMenu modificarEntradaEconomica;
+    private javax.swing.JMenu modificarEntradaEspecie;
+    private javax.swing.JMenu modificarEvento;
+    private javax.swing.JMenu modificarGastos;
+    private javax.swing.JMenu modificarJuntaDirectiva;
+    private javax.swing.JMenu modificarMiembroenEvento;
+    private javax.swing.JMenu modificarPagoMembresia;
+    private javax.swing.JMenu modificarPagoNacional;
+    private javax.swing.JMenu modificarPagoRegular;
+    private javax.swing.JMenu modificarPatrocinador;
+    private javax.swing.JMenu modificarProyecto;
+    private javax.swing.JMenu modificarRedSocial;
+    private javax.swing.JMenu modificarReunionClub;
+    private javax.swing.JMenu modificarReunionNacInt;
+    private javax.swing.JMenu modificarSocio;
+    private javax.swing.JMenu modificarTipoProyecto;
+    private javax.swing.JMenu modificarVoluntario;
     private java.awt.PopupMenu popupMenu1;
     // End of variables declaration//GEN-END:variables
 }
