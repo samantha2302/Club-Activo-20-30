@@ -772,7 +772,6 @@
               </Properties>
               <Events>
                 <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenu53MousePressed"/>
-                <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenu53MouseReleased"/>
               </Events>
             </Menu>
             <Menu class="javax.swing.JMenu" name="jMenu54">

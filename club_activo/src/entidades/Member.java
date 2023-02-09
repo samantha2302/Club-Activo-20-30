@@ -10,7 +10,7 @@ public class Member {
     public Member() {
     }
     
-    public void insertarMember(int idMember, String nameMember, String lastNameMember, int phoneNumberMember, int ageMember, String statusMember, String mailMember, int idClub, int idProject, int idBoardOfDirectors){
+    public void insertarMember(int idMember, String nameMember, String lastNameMember, int phoneNumberMember, int ageMember, String statusMember, String mailMember, String idClub, int idProject, int idBoardOfDirectors){
         try{
             Connection conexion = con.conectar();
             java.sql.Statement st = conexion.createStatement();
@@ -42,7 +42,7 @@ public class Member {
         }
     }
     
-    public void modificarMiembro(int idMemberModificar ,int idMember, String nameMember, String lastNameMember, int phoneNumberMember, int ageMember, String statusMember, String mailMember, int idClub, int idProject, int idBoardOfDirectors){
+    public void modificarMiembro(int idMemberModificar ,int idMember, String nameMember, String lastNameMember, int phoneNumberMember, int ageMember, String statusMember, String mailMember, String idClub, int idProject, int idBoardOfDirectors){
         try{
             Connection conexion = con.conectar();
             java.sql.Statement st = conexion.createStatement();

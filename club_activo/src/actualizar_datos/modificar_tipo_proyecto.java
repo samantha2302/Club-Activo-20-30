@@ -1,13 +1,7 @@
 package actualizar_datos;
 
-import agregar_datos.*;
-import java.awt.Color;
-import javax.swing.UIManager;
+import entidades.TypeProject;
 
-/**
- *
- * @author Katherine
- */
 public class modificar_tipo_proyecto extends javax.swing.JInternalFrame {
 
     public modificar_tipo_proyecto() {
@@ -31,7 +25,7 @@ public class modificar_tipo_proyecto extends javax.swing.JInternalFrame {
         comEdu = new javax.swing.JComboBox<>();
         jPanelSalud = new javax.swing.JPanel();
         comSalud = new javax.swing.JComboBox<>();
-        btnAgregar = new javax.swing.JButton();
+        btnModificar = new javax.swing.JButton();
         idProyecto = new javax.swing.JTextField();
         idTipo = new javax.swing.JTextField();
         idModificar = new javax.swing.JTextField();
@@ -163,13 +157,13 @@ public class modificar_tipo_proyecto extends javax.swing.JInternalFrame {
                 .addGap(0, 4, Short.MAX_VALUE))
         );
 
-        btnAgregar.setBackground(new java.awt.Color(52, 84, 132));
-        btnAgregar.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        btnAgregar.setForeground(new java.awt.Color(255, 255, 255));
-        btnAgregar.setText("Agregar Tipo de Proyecto");
-        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+        btnModificar.setBackground(new java.awt.Color(52, 84, 132));
+        btnModificar.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnModificar.setForeground(new java.awt.Color(255, 255, 255));
+        btnModificar.setText("Modificar  Tipo de Proyecto");
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarActionPerformed(evt);
+                btnModificarActionPerformed(evt);
             }
         });
 
@@ -193,8 +187,8 @@ public class modificar_tipo_proyecto extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(168, Short.MAX_VALUE)
-                .addComponent(btnAgregar)
+                .addContainerGap(155, Short.MAX_VALUE)
+                .addComponent(btnModificar)
                 .addGap(163, 163, 163))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(31, 31, 31)
@@ -237,7 +231,7 @@ public class modificar_tipo_proyecto extends javax.swing.JInternalFrame {
                     .addComponent(jPanelEco, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(idProyecto))
                 .addGap(21, 21, 21)
-                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
@@ -255,13 +249,22 @@ public class modificar_tipo_proyecto extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAgregarActionPerformed
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+        TypeProject tipo=new TypeProject();
+        int idM = Integer.parseInt(idModificar.getText());
+        int idT = Integer.parseInt(idTipo.getText());
+        int idP = Integer.parseInt(idProyecto.getText());
+        boolean educational = (boolean) comEdu.getSelectedItem();
+        boolean ecological = (boolean) comEco.getSelectedItem();
+        boolean recreation = (boolean) comRecre.getSelectedItem();
+        boolean health = (boolean) comSalud.getSelectedItem();
+        boolean other = (boolean) comOtro.getSelectedItem();
+        tipo.modificarTypeProject(idM,idT, educational,ecological,recreation,health,other,idP);
+    }//GEN-LAST:event_btnModificarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAgregar;
+    private javax.swing.JButton btnModificar;
     private javax.swing.JComboBox<String> comEco;
     private javax.swing.JComboBox<String> comEdu;
     private javax.swing.JComboBox<String> comOtro;

@@ -1,6 +1,8 @@
 
 package agregar_datos;
 
+import entidades.Club;
+
 
 public class agregar_club extends javax.swing.JInternalFrame {
 
@@ -54,6 +56,11 @@ public class agregar_club extends javax.swing.JInternalFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Agregar Club");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -111,6 +118,13 @@ public class agregar_club extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Club c=new Club();
+        int idC = Integer.parseUnsignedInt(idClub.getText());
+        int idtele = Integer.parseUnsignedInt(telefonoClub.getText());  
+        c.insertarClub(idC,nombreClub.getText(),idtele,gmailClub.getText(),aniversarioClub.getText());
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField aniversarioClub;
@@ -122,7 +136,4 @@ public class agregar_club extends javax.swing.JInternalFrame {
     private javax.swing.JTextField telefonoClub;
     // End of variables declaration//GEN-END:variables
 
-    private void setCloable() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

@@ -321,6 +321,9 @@
             <Property name="text" type="java.lang.String" value="Agregar Reuni&#xf3;n "/>
             <Property name="actionCommand" type="java.lang.String" value="Button1"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

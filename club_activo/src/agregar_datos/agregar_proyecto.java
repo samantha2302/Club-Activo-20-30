@@ -1,9 +1,7 @@
 package agregar_datos;
 
-/**
- *
- * @author Katherine
- */
+import entidades.Project;
+
 public class agregar_proyecto extends javax.swing.JInternalFrame {
 
     public agregar_proyecto() {
@@ -147,8 +145,13 @@ public class agregar_proyecto extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-        //(numero.getText(),nombre.getText(),descripcion.getText(),horas.getText(),fecha.getText(),beneN.getText(),beneAdul.getText(),total.getText());
-        
+        Project pro=new Project();
+        int idP = Integer.parseInt(numero.getText());
+        int hora = Integer.parseInt(horas.getText());
+        int numN = Integer.parseInt(beneN.getText());
+        int numA = Integer.parseInt(beneAdul.getText());
+        int monto = Integer.parseInt(total.getText());
+        pro.insertarProyecto(idP, nombre.getText(),descripcion.getText(),hora,fecha.getText(),numN,numA,monto);    
     }//GEN-LAST:event_btnAgregarActionPerformed
 
 

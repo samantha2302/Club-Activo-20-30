@@ -1,12 +1,7 @@
 package agregar_datos;
 
-import java.awt.Color;
-import javax.swing.UIManager;
+import entidades.TypeProject;
 
-/**
- *
- * @author Katherine
- */
 public class agregar_tipo_proyecto extends javax.swing.JInternalFrame {
 
     public agregar_tipo_proyecto() {
@@ -245,7 +240,15 @@ public class agregar_tipo_proyecto extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-        // TODO add your handling code here:
+        TypeProject tipo=new TypeProject();
+        int idT = Integer.parseInt(idTipo.getText());
+        int idP = Integer.parseInt(idProyecto.getText());
+        boolean educational = (boolean) comEdu.getSelectedItem();
+        boolean ecological = (boolean) comEco.getSelectedItem();
+        boolean recreation = (boolean) comRecre.getSelectedItem();
+        boolean health = (boolean) comSalud.getSelectedItem();
+        boolean other = (boolean) comOtro.getSelectedItem();
+        tipo.insertarTypeProject(idT, educational,ecological,recreation,health,other,idP);
     }//GEN-LAST:event_btnAgregarActionPerformed
 
 

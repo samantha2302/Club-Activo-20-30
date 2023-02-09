@@ -1,9 +1,7 @@
 package agregar_datos;
 
-/**
- *
- * @author Katherine
- */
+import entidades.CategoryProject;
+
 public class agregar_categoria_proyecto extends javax.swing.JInternalFrame {
     
 
@@ -17,7 +15,7 @@ public class agregar_categoria_proyecto extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        categoria = new javax.swing.JTextField();
+        idCategoria = new javax.swing.JTextField();
         servicio = new javax.swing.JTextField();
         recaudo = new javax.swing.JTextField();
         id_proyecto = new javax.swing.JTextField();
@@ -25,10 +23,10 @@ public class agregar_categoria_proyecto extends javax.swing.JInternalFrame {
 
         jPanel1.setBackground(new java.awt.Color(85, 124, 152));
 
-        categoria.setBackground(new java.awt.Color(85, 124, 152));
-        categoria.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        categoria.setForeground(new java.awt.Color(255, 255, 255));
-        categoria.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Número de Categoría", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Black", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        idCategoria.setBackground(new java.awt.Color(85, 124, 152));
+        idCategoria.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        idCategoria.setForeground(new java.awt.Color(255, 255, 255));
+        idCategoria.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Número de Categoría", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Black", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
         servicio.setBackground(new java.awt.Color(85, 124, 152));
         servicio.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
@@ -63,7 +61,7 @@ public class agregar_categoria_proyecto extends javax.swing.JInternalFrame {
                 .addGap(73, 73, 73)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(idCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(64, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -80,7 +78,7 @@ public class agregar_categoria_proyecto extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(idCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(servicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -107,13 +105,18 @@ public class agregar_categoria_proyecto extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAgregarCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarCategoriaActionPerformed
-       
+       CategoryProject cate=new CategoryProject();
+       int idCat = Integer.parseUnsignedInt(idCategoria.getText());
+       int idProy = Integer.parseUnsignedInt(id_proyecto.getText());
+       boolean ser = Boolean.parseBoolean(servicio.getText());
+       boolean rec = Boolean.parseBoolean(recaudo.getText());
+       cate.insertarCategoryProject(idCat,ser,rec,idProy);
     }//GEN-LAST:event_btnAgregarCategoriaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregarCategoria;
-    private javax.swing.JTextField categoria;
+    private javax.swing.JTextField idCategoria;
     private javax.swing.JTextField id_proyecto;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField recaudo;

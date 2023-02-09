@@ -1,21 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package ventana_principal;
-import javax.swing.JOptionPane;
-import sql.crudsql;
 
-/**
- *
- * @author Katherine
- */
+package ventana_principal;
+import entidades.Member;
+import sql.password;
+
 public class registro extends javax.swing.JInternalFrame {
    
-    /**
-     * Creates new form juegos
-     */
+
     public registro() {
         initComponents();
         this.setClosable(true); 
@@ -104,7 +94,7 @@ public class registro extends javax.swing.JInternalFrame {
                             .addComponent(idProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(edad, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelDatosLayout.setVerticalGroup(
             jPanelDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -176,11 +166,6 @@ public class registro extends javax.swing.JInternalFrame {
         contra.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         contra.setForeground(new java.awt.Color(255, 255, 255));
         contra.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Contraseña", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Black", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
-        contra.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                contraActionPerformed(evt);
-            }
-        });
 
         confirmarContra.setBackground(new java.awt.Color(85, 124, 152));
         confirmarContra.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
@@ -194,18 +179,17 @@ public class registro extends javax.swing.JInternalFrame {
             .addGroup(jPanelContraLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelContraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(confirmarContra, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                    .addComponent(confirmarContra, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
                     .addComponent(contra, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
         jPanelContraLayout.setVerticalGroup(
             jPanelContraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelContraLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addContainerGap(21, Short.MAX_VALUE)
                 .addComponent(contra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(confirmarContra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(confirmarContra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanelJunta.setBackground(new java.awt.Color(85, 124, 152));
@@ -236,6 +220,11 @@ public class registro extends javax.swing.JInternalFrame {
         btnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
         btnRegistrar.setText("Registrarse");
         btnRegistrar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnRegistrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnRegistrarMousePressed(evt);
+            }
+        });
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
@@ -256,13 +245,13 @@ public class registro extends javax.swing.JInternalFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(2, 2, 2)
                                 .addComponent(jPanelEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanelContra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanelJunta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanelClub, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jPanelClub, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanelContra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
+                        .addGap(67, 67, 67)
                         .addComponent(btnRegistrar)))
-                .addGap(19, 19, 19))
+                .addGap(58, 58, 58))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -280,16 +269,14 @@ public class registro extends javax.swing.JInternalFrame {
                         .addComponent(jPanelContra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnRegistrar)))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -299,24 +286,26 @@ public class registro extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
-    crudsql objcrud=new crudsql();
     
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
-       if(contra.getPassword().equals(confirmarContra.getPassword())){
+            Member mem=new Member();
+            int idMem = Integer.parseInt(cedula.getText());
+            int idPho = Integer.parseInt(telefono.getText());
+            int idEdad = Integer.parseInt(edad.getText());
+            int idProy = Integer.parseInt(idProyecto.getText());
+            int idJ = Integer.parseInt(junta.getText());
             String esta= (String) estado.getSelectedItem();
-            String idclub= (String) club.getSelectedItem();
-            objcrud.insertar(cedula.getText(), nombre.getText(), apellidos.getText(), telefono.getText(), 
-                edad.getText(), esta, gmail.getText(),idclub, idProyecto.getText(), junta.getText());
-       }
-       else{
-           JOptionPane.showMessageDialog(null, "La contraseña no es igual, ingresela de nuevo", "Contraseña Incorrecta", JOptionPane.ERROR_MESSAGE);
-       }
-      
+            String idclub= (String) club.getSelectedItem();    
+            mem.insertarMember(idMem,nombre.getText(),apellidos.getText(),idPho,idEdad,esta,gmail.getText(),idclub,idProy,idJ);
+            
+            String cont = new String(contra.getPassword());
+            password pas=new password();
+            pas.insertarContra(cont, idMem);
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
-    private void contraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_contraActionPerformed
+    private void btnRegistrarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegistrarMousePressed
+             
+    }//GEN-LAST:event_btnRegistrarMousePressed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

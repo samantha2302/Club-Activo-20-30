@@ -4,6 +4,8 @@
  */
 package agregar_datos;
 
+import entidades.NationalOrInternationalMeeting;
+
 /**
  *
  * @author Katherine
@@ -94,6 +96,11 @@ public class agregar_reunion_internacional extends javax.swing.JInternalFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Agregar Reunión");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -156,6 +163,14 @@ public class agregar_reunion_internacional extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        NationalOrInternationalMeeting re=new NationalOrInternationalMeeting();
+        String tipo = (String) tipoReu.getSelectedItem();
+        int idR = Integer.parseInt(idReuClub.getText());
+        int idJ = Integer.parseInt(idJunta.getText());
+        re.insertarNationalOrInternationalMeeting(idR,asistencia.getText(),tipo,hora.getText(),fecha.getText(),idJ);      
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

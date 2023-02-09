@@ -42,11 +42,11 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="numero1" alignment="1" max="32767" attributes="0"/>
+                      <Component id="idMod" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="numero" alignment="1" min="-2" pref="158" max="-2" attributes="0"/>
+                              <Component id="idPro" alignment="1" min="-2" pref="158" max="-2" attributes="0"/>
                               <Component id="nombre" alignment="1" min="-2" pref="158" max="-2" attributes="0"/>
                               <Component id="descripcion" alignment="1" min="-2" pref="158" max="-2" attributes="0"/>
                               <Component id="horas" alignment="1" min="-2" pref="158" max="-2" attributes="0"/>
@@ -66,7 +66,7 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="btnAgregar" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnModificar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -79,12 +79,12 @@
                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="fecha" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="numero1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="idMod" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="beneN" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="numero" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="idPro" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -98,7 +98,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnAgregar" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="btnModificar" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="horas" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="64" max="32767" attributes="0"/>
@@ -191,7 +191,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="numero">
+        <Component class="javax.swing.JTextField" name="idPro">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="98" green="7c" red="55" type="rgb"/>
@@ -276,7 +276,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnAgregar">
+        <Component class="javax.swing.JButton" name="btnModificar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="54" green="34" red="24" type="rgb"/>
@@ -287,7 +287,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Agregar Proyecto"/>
+            <Property name="text" type="java.lang.String" value="Modificar Proyecto"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
                 <BevelBorder/>
@@ -295,10 +295,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModificarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="numero1">
+        <Component class="javax.swing.JTextField" name="idMod">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="98" green="7c" red="55" type="rgb"/>
