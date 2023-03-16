@@ -11,9 +11,9 @@ import javax.swing.JOptionPane;
 
 public class conexionsql {
     Connection conn=null;
-    String url="jdbc:postgresql://localhost/club_activo_20_30";
-    String usuario="postgres";
-    String clave ="2042";
+    String url="";
+    String usuario="";
+    String clave ="";
     
      public Connection conectar(){
         try{
